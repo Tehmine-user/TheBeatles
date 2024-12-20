@@ -1,0 +1,126 @@
+ <HTML>
+ <HEAD>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <TITLE> О Beatles </TITLE>
+ <style type="text/css">
+
+.content{
+  background:  coral;
+  width: 75%;
+  height: 100%;
+  text-align: center;
+}
+.parent{
+  display: block;
+  width: 25%;
+  height: 100%;
+}
+ IMG.fig {
+    width: 950px; /* ширина картинки */
+    heigh: 550px;}/* высота картинки */
+
+.element {
+  background-position: bottom right;
+}
+
+</style>
+ </HEAD>
+ <body>
+
+  <header>
+  
+  <div class="topnav">
+ 
+  <input type="text" placeholder="Search..">
+</div>
+  
+  <div class="menu">
+    <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+    <label for="burger-checkbox" class="burger"></label>
+    <ul class="menu-list">
+        <li><a href="#" class="menu-item">Главная</a><li>
+         <li><a  href=Info.html class="menu-item">Общая информация</a></li>
+         <li><a  href=History.html  class="menu-item">История</a></li> 
+  <li><a  href=Film.html class="menu-item">Фильмография</a></li>
+  <li><a  href=Disc.html class="menu-item">Дискография</a></li>
+  <li><a  href=Link.html class="menu-item">Источники</a></li>
+  <li><a  href=Shop.html class="menu-item">Заказать Альбом</a></li>
+  <li><a  href=Contacts.html class="menu-item">Контакты</a></li>
+</div>
+
+ 
+   <font size="+4"><h1>The Beatles</h1></font>
+  
+  </header>
+
+  <div class="main">
+       <div class="content">
+	   
+   <font size="+3"><h1>  <em> Добро пожаловать на сайт,<br> посвящённый легендарной группе "The Beatles"</em> </h1> </br> </font>
+	<div class="slideshow-container">
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+    </div>
+        <div class="parent">
+ <p aling="justify"><b> Об этой группе написано столько, что вряд ли нам удалось бы добавить что-либо новое. На нашем
+сайте вы найдете историю создания группы, биографии участников, дискографию и фильмографию
+группы. Мы предлагаем вашему вниманию только достовернуюинформацию.
+Это учебный сайт демонстрационного содержания.Его цель - отработка технологии разметки
+гипертекстовых документов с помощью языка HTML. Более полную информацию о группе The Beatles
+вы найдете на других сайтах. Приносим свои извинения.</b></p>
+     </div>
+    </div>
+  <footer>
+  <div class="icon-bar">
+  <a href="https://ru.wikipedia.org/wiki/The_Beatles"><i class="fa fa-link"></i></a> 
+  <a href="#"><i class="fa fa-search"></i></a> 
+  <a href="https://www.thebeatles.com"><i class="fa fa-globe"></i></a>
+  <a href="mailto:vgregl@rambler.ru?&subject=Beatles&body=Привет"><i class="fa fa-envelope"></i></a> 
+  <a href="https://t.me/ZvezdichevOfficialbot"><i class="fa fa-telegram"></i></a> 
+</div>
+   <center><HR width=50% size=3 color=green><font face=Arial size=1 > &copy; Все права защищены. </font></center>
+  </footer>
+</body>
+</HTML>
